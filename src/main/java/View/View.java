@@ -2,6 +2,7 @@ package View;
 
 
 import Controller.Listeners;
+import Model.Processor;
 import View.Bench.BenchJPanel;
 import View.CPU.CPUJPanel;
 import View.Graphics.GraphicsJPanel;
@@ -12,7 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class View extends JFrame {
-    public static JPanel cpuJPanel;
+    public static CPUJPanel cpuJPanel;
     public static JPanel mainboardJPanel;
     public static JPanel memoryJPanel;
     public static JPanel graphicsJPanel;
@@ -77,6 +78,23 @@ public class View extends JFrame {
     }
     public static void setCurrentJPanel(String id){
         cardLayout.show(contentJPanel, id);
+    }
+
+    public static void setNameTextArea(String textArea){
+        cpuJPanel.setNameTextArea(textArea);
+    }
+    public static void setVendorTextArea(String textArea){
+        cpuJPanel.setVendorTextArea(textArea);
+    }
+    public static void setFamilyTextArea(String textArea){
+        cpuJPanel.setFamilyTextArea(textArea);
+    }
+    public static void setProcessorIDTextArea(String textArea){
+        cpuJPanel.setProcessorIDTextArea(textArea);
+    }
+
+    public static void setIdentifierTextArea(String textArea){
+        cpuJPanel.setIdentifierTextArea(textArea);
     }
     public static void addJMenuListeners(){
         cpuJMenuItem.addActionListener(new Listeners.CPUJMenuListener());

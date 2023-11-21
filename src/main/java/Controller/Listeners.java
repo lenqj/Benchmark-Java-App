@@ -1,10 +1,6 @@
 package Controller;
 
-import Model.Model;
 import View.View;
-
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,12 +11,11 @@ public class Listeners {
         }
     }
 
-        public static class MainboardJMenuListener implements ActionListener {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(e.getActionCommand());
+    public static class MainboardJMenuListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
                 View.setCurrentJPanel("1");
             }
-        }
+    }
 
     public static class MemoryJMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {

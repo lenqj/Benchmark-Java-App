@@ -20,4 +20,21 @@ public class CPUJPanel extends JPanel {
         contentPanel.add(topPanel);
         add(contentPanel);
     }
+
+    public void setNameTextArea(String textArea){
+        processorJPanel.setNameTextArea(textArea);
+    }
+    public void setVendorTextArea(String textArea){
+        processorJPanel.setVendorTextArea(textArea);
+    }
+    public void setFamilyTextArea(String textArea){
+        processorJPanel.setFamilyTextArea(textArea);
+    }
+    public void setProcessorIDTextArea(String textArea){
+        processorJPanel.setProcessorIDTextArea(textArea);
+    }
+
+    public void setIdentifierTextArea(String textArea){
+        processorJPanel.setIdentifierTextArea(textArea);
+    }
 }
