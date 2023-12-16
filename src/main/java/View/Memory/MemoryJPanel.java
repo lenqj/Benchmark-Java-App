@@ -1,23 +1,35 @@
 package View.Memory;
 
-import View.Mainboard.BIOSJPanel;
-import View.Mainboard.MotherboardJPanel;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MemoryJPanel extends JPanel {
     GeneralJPanel generalJPanel;
     TimingsJPanel timingsJPanel;
     public MemoryJPanel() {
         JPanel contentPanel = new JPanel();
-        JPanel topPanel = new JPanel();
-        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.X_AXIS));
         generalJPanel = new GeneralJPanel();
         timingsJPanel = new TimingsJPanel();
-        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.PAGE_AXIS));
-        topPanel.add(generalJPanel);
-        topPanel.add(timingsJPanel);
-        contentPanel.add(topPanel);
+        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
+        contentPanel.add(generalJPanel);
+        contentPanel.add(timingsJPanel);
         add(contentPanel);
+    }
+
+    public void setRAMFrequencyJLabel(String text) {
+        timingsJPanel.setRAMFrequencyJLabel(text);
+    }
+    public void setRAMBankJLabel(String text) {
+        timingsJPanel.setRAMBankJLabel(text);
+    }
+    public void setRAMManufacturerJLabel(String text) {
+        timingsJPanel.setRAMManufacturerJLabel(text);
+    }
+    public void setRAMSizeJLabel(String text) {
+        generalJPanel.setRAMSizeJLabel(text);
+    }
+    public void setRAMTypeJLabel(String text) {
+        generalJPanel.setRAMTypeJLabel(text);
     }
 }

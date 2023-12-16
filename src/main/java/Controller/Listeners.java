@@ -11,25 +11,19 @@ public class Listeners {
         }
     }
 
-    public static class MainboardJMenuListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-                View.setCurrentJPanel("1");
-            }
-    }
-
     public static class MemoryJMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            View.setCurrentJPanel("2");
+            View.setCurrentJPanel("1");
         }
     }
     public static class GraphicsJMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            View.setCurrentJPanel("3");
+            View.setCurrentJPanel("2");
         }
     }
     public static class BenchJMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            View.setCurrentJPanel("4");
+            View.setCurrentJPanel("3");
         }
     }
 }

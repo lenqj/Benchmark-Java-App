@@ -1,68 +1,60 @@
 package View.CPU;
 
 import javax.swing.*;
+import javax.swing.border.MatteBorder;
+import javax.swing.border.TitledBorder;
+import java.awt.*;
 
 public class ProcessorJPanel extends JPanel{
-    private final JTextArea nameTextArea;
-    private final JTextArea vendorTextArea;
-    private final JTextArea familyTextArea;
-    private final JTextArea processorIDTextArea;
-    private final JTextArea identifierTextArea;
+    private final JLabel nameJLabel;
+    private final JLabel vendorJLabel;
+    private final JLabel familyJLabel;
+    private final JLabel processorIDJLabel;
+    private final JLabel identifierJLabel;
     ProcessorJPanel(){
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-
+        panel.setLayout(new GridLayout(5, 5));
+        panel.setBorder(new TitledBorder(new MatteBorder(2, 2, 2, 2, Color.GRAY), "Processor"));
         JLabel nameLabel = new JLabel("Name");
         JLabel vendorLabel = new JLabel("Vendor");
         JLabel familyLabel = new JLabel("Family");
         JLabel processorIDLabel = new JLabel("Processor ID");
         JLabel identifierLabel = new JLabel("Identifier");
 
-        nameTextArea = new JTextArea();
-        vendorTextArea = new JTextArea();
-        familyTextArea = new JTextArea();
-        processorIDTextArea = new JTextArea();
-        identifierTextArea = new JTextArea();
-        setTextAreasEditable();
+        nameJLabel = new JLabel();
+        vendorJLabel = new JLabel();
+        familyJLabel = new JLabel();
+        processorIDJLabel = new JLabel();
+        identifierJLabel = new JLabel();
 
         panel.add(nameLabel);
-        panel.add(nameTextArea);
+        panel.add(nameJLabel);
         panel.add(vendorLabel);
-        panel.add(vendorTextArea);
+        panel.add(vendorJLabel);
         panel.add(familyLabel);
-        panel.add(familyTextArea);
+        panel.add(familyJLabel);
         panel.add(processorIDLabel);
-        panel.add(processorIDTextArea);
+        panel.add(processorIDJLabel);
         panel.add(identifierLabel);
-        panel.add(identifierTextArea);
+        panel.add(identifierJLabel);
 
 
         add(panel);
     }
-    void setNameTextArea(String textArea){
-        nameTextArea.setText(textArea);
+    void setNameJLabel(String textArea){
+        nameJLabel.setText(textArea);
     }
-    void setVendorTextArea(String textArea){
-        vendorTextArea.setText(textArea);
+    void setVendorJLabel(String textArea){
+        vendorJLabel.setText(textArea);
     }
-
-    void setFamilyTextArea(String textArea){
-        familyTextArea.setText(textArea);
+    void setFamilyJLabel(String textArea){
+        familyJLabel.setText(textArea);
     }
-    void setProcessorIDTextArea(String textArea){
-        processorIDTextArea.setText(textArea);
+    void setProcessorIDJLabel(String textArea){
+        processorIDJLabel.setText(textArea);
     }
-
-    void setIdentifierTextArea(String textArea){
-        identifierTextArea.setText(textArea);
-    }
-
-    private void setTextAreasEditable(){
-        nameTextArea.setEditable(false);
-        vendorTextArea.setEditable(false);
-        familyTextArea.setEditable(false);
-        processorIDTextArea.setEditable(false);
-        identifierTextArea.setEditable(false);
+    void setIdentifierJLabel(String textArea){
+        identifierJLabel.setText(textArea);
     }
 
 }

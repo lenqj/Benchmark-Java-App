@@ -1,40 +1,53 @@
 package View.CPU;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class CPUJPanel extends JPanel {
-    ProcessorJPanel processorJPanel;
-    ClocksJPanel clocksJPanel;
-    CacheJPanel cacheJPanel;
+    private final ProcessorJPanel processorJPanel;
+    private final ClocksJPanel clocksJPanel;
+    private final  CacheJPanel cacheJPanel;
     public CPUJPanel() {
         JPanel contentPanel = new JPanel();
-        JPanel topPanel = new JPanel();
-        topPanel.setLayout(new BoxLayout(topPanel, BoxLayout.X_AXIS));
         processorJPanel = new ProcessorJPanel();
         clocksJPanel = new ClocksJPanel();
         cacheJPanel = new CacheJPanel();
-        contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.PAGE_AXIS));
-        topPanel.add(processorJPanel);
-        topPanel.add(clocksJPanel);
-        topPanel.add(cacheJPanel);
-        contentPanel.add(topPanel);
+        contentPanel.setLayout(new GridLayout(2, 1));
+        contentPanel.add(processorJPanel);
+        JPanel bottomPanel = new JPanel(new GridLayout(1, 2));
+        bottomPanel.add(clocksJPanel);
+        bottomPanel.add(cacheJPanel);
+        contentPanel.add(bottomPanel);
         add(contentPanel);
     }
 
-    public void setNameTextArea(String textArea){
-        processorJPanel.setNameTextArea(textArea);
+    public void setNameJLabel(String text){
+        processorJPanel.setNameJLabel(text);
     }
-    public void setVendorTextArea(String textArea){
-        processorJPanel.setVendorTextArea(textArea);
+    public void setVendorJLabel(String text){
+        processorJPanel.setVendorJLabel(text);
     }
-    public void setFamilyTextArea(String textArea){
-        processorJPanel.setFamilyTextArea(textArea);
+    public void setFamilyJLabel(String text){
+        processorJPanel.setFamilyJLabel(text);
     }
-    public void setProcessorIDTextArea(String textArea){
-        processorJPanel.setProcessorIDTextArea(textArea);
+    public void setProcessorIDJLabel(String text){
+        processorJPanel.setProcessorIDJLabel(text);
+    }
+    public void setIdentifierJLabel(String text){
+        processorJPanel.setIdentifierJLabel(text);
+    }
+    public void setCacheL1Label(String text) {
+        cacheJPanel.setCacheL1Label(text);
     }
 
-    public void setIdentifierTextArea(String textArea){
-        processorJPanel.setIdentifierTextArea(textArea);
+    public void setCacheL2Label(String text) {
+        cacheJPanel.setCacheL2Label(text);
+    }
+
+    public void setCacheL3Label(String text) {
+        cacheJPanel.setCacheL3Label(text);
+    }
+    public void setProcessorFrequencyJLabel(String text) {
+        clocksJPanel.setProcessorFrequencyJLabel(text);
     }
 }
