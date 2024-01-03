@@ -8,7 +8,7 @@ public class ClocksJPanel extends JPanel{
     private final JLabel frequencyJLabel;
     ClocksJPanel(){
         JPanel panel = new JPanel();
-        panel.setPreferredSize(new Dimension(150, 90));
+        panel.setPreferredSize(new Dimension(170, 90));
         panel.setBorder(new TitledBorder(new MatteBorder(2, 2, 2, 2, Color.GRAY), "Clocks"));
         panel.setLayout(new GridLayout(1, 2));
         frequencyJLabel = new JLabel();

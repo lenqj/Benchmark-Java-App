@@ -1,8 +1,6 @@
 package View.Memory;
 
-
 import javax.swing.*;
-import java.awt.*;
 
 public class MemoryJPanel extends JPanel {
     GeneralJPanel generalJPanel;

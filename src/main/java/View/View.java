@@ -15,7 +15,7 @@ public class View extends JFrame {
     public static CPUJPanel cpuJPanel;
     public static MemoryJPanel memoryJPanel;
     public static GraphicsJPanel graphicsJPanel;
-    public static JPanel benchJPanel;
+    public static BenchJPanel benchJPanel;
     public static JPanel contentJPanel;
     private static CardLayout cardLayout;
     private static JMenuItem cpuJMenuItem;
@@ -129,6 +129,13 @@ public class View extends JFrame {
         memoryJMenuItem.addActionListener(new Listeners.MemoryJMenuListener());
         graphicsJMenuItem.addActionListener(new Listeners.GraphicsJMenuListener());
         benchJMenuItem.addActionListener(new Listeners.BenchJMenuListener());
+    }
+    public static void addButtonsListeners(){
+        benchJPanel.addButtonsListeners(new Listeners.BenchButtonListener());
+    }
+
+    public static void setBenchResultJLabel(String text){
+        benchJPanel.setBenchResultJLabel(text);
     }
 }
 

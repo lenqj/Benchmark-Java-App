@@ -1,8 +1,10 @@
 package Controller;
 
+import Model.Bench;
 import View.View;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 public class Listeners {
     public static class CPUJMenuListener implements ActionListener {
@@ -24,6 +26,13 @@ public class Listeners {
     public static class BenchJMenuListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             View.setCurrentJPanel("3");
+        }
+    }
+
+
+    public static class BenchButtonListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            View.setBenchResultJLabel(Bench.run());
         }
     }
 }

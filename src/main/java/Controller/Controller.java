@@ -12,6 +12,7 @@ public class Controller {
         setGPULabels();
         setRAMLabels();
         View.addJMenuListeners();
+        View.addButtonsListeners();
         setVisible(true);
     }
 
